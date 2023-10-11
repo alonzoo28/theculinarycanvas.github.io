@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<head>
+ <html>
+  <meta charset="UTF-8">
+  <meta name="description" content="Cooking book">
+  <meta name="keywords" content="Cook book, Cousines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=<"author" content="Grade 12 Students">   
+  <title>The Culinary Canvas: Food as an Edible Art</title> 
+  <style>
+body{
+    background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/380745328_1410125786384763_7048855598403155790_n.jpg?stp=dst-jpg_s370x247&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFyAXS6QtV_di4GvjTGPOJmgGHq_5G1-E-AYer_kbX4T5ADIsyqkxPSyVnbwAVbpIPsrgfLP4UFp8qmVtmKWlwC&_nc_ohc=G_SJa9qzF2QAX-b-Xlw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQvLgSCl3CTYuPDDI-5yG5ua-BkfB11qiyJYeDxv2cZHA&oe=65349454);
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+*{
+   margin: 0;
+   padding: 0;
+   color: #f2f5f7;
+   font-family: sans-serif;
+   letter-spacing: 1px;
+   font-weight: 300;
+   scroll-behavior: smooth;
+}
+body{
+   overflow-x: hidden;
+}
+nav{
+   height: 4.5rem;
+   width: 100vw;
+   background-color: #131418;
+   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+   display: flex;
+   position: fixed;
+   z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+   padding:1vh 1vw;
+   text-align: center;
+}
+.logo img {
+   height: 5rem;
+   width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+   display: flex;
+   list-style: none; 
+   width: 88vw;
+   padding: 0 0.7vw;
+   justify-content: space-evenly;
+   align-items: center;
+   text-transform: uppercase;
+}
+.nav-links li a{
+   text-decoration: none;
+   margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+   color: #b7950e;
+}
+.nav-links li {
+   position: relative;
+}
+.nav-links li a:hover::before{
+   width: 80%;
+}
+.moraimg {
+   padding-top: 8%;
+}
+.moraimg img {
+    border-radius: 6px;
+    height: 350px;
+}
+/*buttons in mora*/
+button {
+  height: 50px;
+  margin: 5px;
+  width: 120px;
+  background: #7f6711;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #404C5D 1px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #bf841e, #d18006);
+  -webkit-box-shadow: -1px -5px 15px #c49a41, 
+               5px  5px 15px #000000, 
+    inset      5px  5px 10px #be770b, 
+    inset     -5px -5px 10px #d48d13;
+ 
+}
+
+button:hover {
+  -webkit-box-shadow: 1px 1px 13px #20232e,
+                    -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e,
+             -1px -1px 13px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+button:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e,
+                     -1px -1px 33px #545b78;
+  box-shadow: 1px 1px 13px #20232e,
+             -1px -1px 33px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+.recipemora h1{
+   padding-left: 5%;
+   font-size: 60px;
+   padding-top: 8%;
+   font-family: Bebas Neue;
+   -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+}
+.recipemora ul {
+   padding-left: 10%;
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.preparation1 h1{
+   padding-left: 5%;
+   font-size: 60px;
+   padding-top: 2%;
+   font-family: Bebas Neue;
+   -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+}
+.preparation1 ul {
+   padding-left: 10%;
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.procedure1 h1{
+   padding-left: 5%;
+   font-size: 60px;
+   padding-top: 2%;
+   font-family: Bebas Neue;
+   -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+}
+.procedure1 ul {
+   padding-left: 10%;
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+</style>
+
+  <body>
+   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+   <script>
+   // Get the button
+   let mybutton = document.getElementById("myBtn");
+   
+   // When the user scrolls down 20px from the top of the document, show the button
+   window.onscroll = function() {scrollFunction()};
+   
+   function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       mybutton.style.display = "block";
+     } else {
+       mybutton.style.display = "none";
+     }
+   }
+   
+   // When the user clicks on the button, scroll to the top of the document
+   function topFunction() {
+     document.body.scrollTop = 0;
+     document.documentElement.scrollTop = 0;
+   }
+   </script>
+   <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+         <span style="color:#7f6711; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">CUISINES</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="chefs.html">Chefs</a></li>
+            <li><a href="equipments.html">Equipments</a></li>
+            <li><a href="contactus">Contact Us</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+    <div class="moraimg">
+       <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6qWYN0867iSDWZH1utmP-C2SFm3HoPbINrg&usqp=CAU "></center>
+        <div class="bttnrecipe">
+        <center>
+         <a href="Japanesecuisine.html"><button>
+         Back
+         </button></a>
+        <a href="#Recipe">
+         <button>
+         Recipe
+        </button></a>
+        <a href="#procedure">
+        <button>
+         Procedure
+        </button></a></center>
+      </div>
+         </div>
+       <div class="recipemora">
+         <section id="Recipe">
+         <h1>RECIPE</h1>
+         <br>
+<ul>For the Chicken Skewers:</ul>
+<ul>• 1 pound boneless, skinless chicken thighs or chicken breast, cut into bite-sized pieces</ul>
+<ul>• Bamboo skewers (soaked in water to prevent burning)</ul>
+<br>
+<ul>For the Yakitori Sauce (Tare):</ul>
+<ul>• 1/4 cup soy sauce</ul>
+<ul>•  1/4 cup mirin (sweet rice wine)</ul>
+<ul>•  1/4 cup sake (Japanese rice wine)</ul>
+<ul>•  2 tablespoons sugar</ul>
+<br>
+<ul>Optional Toppings:</ul>
+<ul>• Shichimi togarashi (Japanese seven-spice blend</ul>
+<ul>• Chopped green onions</ul>
+      <br><br> 
+      </section>
+     </div>
+     <div class="procedure1">
+     <section id="procedure">
+      <h1>PROCEDURE</h1>
+      <br>
+<ul>Prepare the Yakitori Sauce (Tare):</ul>
+<ul>   • In a small saucepan, combine the soy sauce, mirin, sake, and sugar.</ul>
+<ul>   • Heat the mixture over medium heat, stirring until the sugar dissolves.</ul>
+<ul>   • Bring it to a simmer and let it cook for about 5-7 minutes until it thickens slightly.</ul>
+<ul>   • Remove the sauce from heat and let it cool. This sauce will be used for basting the chicken during grilling.</ul>
+<br>
+<ul>Assemble the Skewers:</ul>
+<ul>   • Thread the chicken pieces onto the bamboo skewers, leaving some space between each piece.</ul>
+<ul>   • You can alternate with vegetables like green bell peppers or scallions for added flavor and variety.</ul>
+<br>
+<ul>Grill the Yakitori:</ul>
+<ul>   • Preheat a grill (charcoal or gas) to medium-high heat.</ul>
+<ul>   • Place the chicken skewers on the grill and cook for a few minutes on each side, turning occasionally.</ul>
+<ul>   • While grilling, brush the yakitori sauce (tare) onto the chicken frequently, allowing it to caramelize and infuse the skewers with flavor.</ul>
+<ul>   • Grill until the chicken is fully cooked and has a nice char, usually about 10-12 minutes in total.</ul>
+<br>
+<ul>Serve:</ul>
+<ul>   • Remove the chicken skewers from the grill and let them rest for a minute.</ul>
+<ul>   •  Optionally, sprinkle shichimi togarashi (Japanese seven-spice blend) and chopped green onions over the yakitori for added flavor and garnish.</ul>
+<br>
+<ul>Enjoy:</ul>
+<ul>   • Serve your homemade yakitori hot, either as an appetizer or a main dish.</ul>
+<ul>   • Yakitori pairs well with a cold beer or sake.</ul>
+ </section>
+   </div>
+    <br><br>
+</body>
+  </html>

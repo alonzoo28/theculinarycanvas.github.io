@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+ <html>
+  <meta charset="UTF-8">
+  <meta name="description" content="Cooking book">
+  <meta name="keywords" content="Cook book, Cousines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=<"author" content="Grade 12 Students">   
+  <title>The Culinary Canvas: Food as an Edible Art</title> 
+  <style>
+body{
+    background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/380745328_1410125786384763_7048855598403155790_n.jpg?stp=dst-jpg_s370x247&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFyAXS6QtV_di4GvjTGPOJmgGHq_5G1-E-AYer_kbX4T5ADIsyqkxPSyVnbwAVbpIPsrgfLP4UFp8qmVtmKWlwC&_nc_ohc=G_SJa9qzF2QAX-b-Xlw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQvLgSCl3CTYuPDDI-5yG5ua-BkfB11qiyJYeDxv2cZHA&oe=65349454);
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+*{
+   margin: 0;
+   padding: 0;
+   color: #f2f5f7;
+   font-family: sans-serif;
+   letter-spacing: 1px;
+   font-weight: 300;
+}
+body{
+   overflow-x: hidden;
+}
+nav{
+   height: 4.5rem;
+   width: 100vw;
+   background-color: #131418;
+   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+   display: flex;
+   position: fixed;
+   z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+   padding:1vh 1vw;
+   text-align: center;
+}
+.logo img {
+   height: 5rem;
+   width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+   display: flex;
+   list-style: none; 
+   width: 88vw;
+   padding: 0 0.7vw;
+   justify-content: space-evenly;
+   align-items: center;
+   text-transform: uppercase;
+}
+.nav-links li a{
+   text-decoration: none;
+   margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+   color: #b7950e;
+}
+.nav-links li {
+   position: relative;
+}
+.nav-links li a:hover::before{
+   width: 80%;
+}
+
+.p4 {
+   padding-top: 200px;
+   text-align: center;
+   font-size: 50px;
+}
+.choosecuisine {
+            padding-top: 9%;
+            text-align: center;
+        }
+
+        .choosecuisine h1 {
+            font-weight: 600;
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: black;
+            font-size: 50px;
+        }
+
+        .cuisine1 {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5%;
+        }
+
+        .cuisine1 img {
+            max-width: 20%;
+            max-height: 20%;
+            border-radius: 16px;
+        }
+        
+        .box {
+            width: 170px;
+            height: auto;
+            float: left;
+            transition: .5s linear;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            padding: 15px;
+            text-align: center;
+            margin: 0 5px;
+            background: transparent;
+            text-transform: uppercase;
+            font-weight: 900;
+            
+        }
+
+        .box:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 100%;
+            border-bottom: 4px solid transparent;
+            border-left: 4px solid transparent;
+            box-sizing: border-box;
+            transform: translateX(100%);
+        }
+
+        .box:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-top: 4px solid transparent;
+            border-right: 4px solid transparent;
+            box-sizing: border-box;
+            transform: translateX(-100%);
+        }
+
+        .box:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .box:hover:before {
+            border-color: #262626;
+            height: 100%;
+            transform: translateX(0);
+            transition: .3s transform linear, .3s height linear .3s;
+        }
+
+        .box:hover:after {
+            border-color: #262626;
+            height: 100%;
+            transform: translateX(0);
+            transition: .3s transform linear, .3s height linear .5s;
+        }
+
+        button {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background: transparent;
+        }
+
+        .cbttns {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 1%;
+        }
+  </style>
+
+  <body>
+       <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+         <span style="color:#7f6711; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">CUISINES</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="chefs.html">Chefs</a></li>
+            <li><a href="equipments.html">Equipments</a></li>
+            <li><a href="contactus">Contact Us</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+    <div class="choosecuisine">
+      <h1>CHINESE DISHES</h1>
+  </div>
+  <div class="cuisine1">
+      <img src="https://ltl-xian.com/wp-content/sites/18/best-xian-food-famous-480x293.jpg"
+          alt="Mora Meat">
+      <img src="https://static2.srcdn.com/wordpress/wp-content/uploads/2021/08/a8b606080c234486a7d761d387e8b8.jpg"
+          alt="Adeptus">
+      <img src="https://th.bing.com/th/id/R.005fd22a39dc3eb787631c6ed1ac4d60?rik=p9ImIv6wuODeDw&riu=http%3a%2f%2fwww.easytourchina.com%2fimages%2fPhoto%2fchinese-cuisine-food%2fp937_d20160531120000.jpg&ehk=z4Fe254%2fNHWJfaDCptNfIRkTQ2qyrj71EdMDt0yVleQ%3d&risl=&pid=ImgRaw&r=0"
+          alt="Squirrel">
+      <img src="https://2.bp.blogspot.com/-SrYOKRaViPs/W-lLcUnxIZI/AAAAAAABDro/B6gEcakfiNQPqm94ZrgrR0lviw1fOovKQCLcBGAs/s1600/DSC_0097.JPG"
+          alt="golden">
+  </div>
+  <div class="cbttns">
+      <a href="morameat.html">
+          <button>
+              <span class="box">
+                  Mora Meat
+              </span>
+          </button></a>
+      <a href="adeptus.html">
+          <button>
+              <span class="box">
+                  Adeptus' Temptation
+              </span>
+          </button></a>
+      <a href="squirrel.html">
+          <button>
+              <span class="box">
+               Squirrel Fish
+              </span>
+          </button></a>
+      <a href="golden.html">
+          <button>
+              <span class="box">
+                  Golden Crab
+              </span>
+          </button></a>
+  </div>
+    </div>
+    <!-- dishes row 2 -->
+    <div class="cuisine1">
+      <img src="https://upload-os-bbs.hoyolab.com/upload/2022/02/10/29188252/b8ae47c4c10cc013d253c43e5f5772a9_3724244598295653289.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_80"
+          alt="Black-Back Perch Stew">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY7R7fzkjJnil-Pf5U4hb6E_cPfh_OcgGQDg&usqp=CAU"
+          alt="Jueyun Chili Chicken">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzl7E_3n3j2eDpuMsrJg2ypB72LZHJTJ4AxA&usqp=CAU"
+          alt="Jade Parcels">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7Pe8v8MVa7jxtbV5oxV4g_WEn71BmgGaLQ&usqp=CAU"
+          alt="Bamboo Shoot Soup">
+  </div>
+  <div class="cbttns">
+      <a href="blackperchstew.html">
+          <button>
+              <span class="box">
+                  Black-Back Perch Stew
+              </span>
+          </button></a>
+      <a href="jueyun.html">
+          <button>
+              <span class="box">
+                  Jueyun Chili Chicken
+              </span>
+          </button></a>
+      <a href="jade.html">
+          <button>
+              <span class="box">
+              Jade Parcelss
+              </span>
+          </button></a>
+      <a href="bamboo.html">
+          <button>
+              <span class="box">
+                  Bamboo Shoot Soup
+              </span>
+          </button></a>
+  </div>
+    </div>
+   </body>
+  </html>

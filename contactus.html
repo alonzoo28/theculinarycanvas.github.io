@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+ <html>
+  <meta charset="UTF-8">
+  <meta name="description" content="Cooking book">
+  <meta name="keywords" content="Cook book, Cousines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=<"author" content="Grade 12 Students">   
+  <title>The Culinary Canvas: Food as an Edible Art</title> 
+  <style>
+body{
+    background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/380745328_1410125786384763_7048855598403155790_n.jpg?stp=dst-jpg_s370x247&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFyAXS6QtV_di4GvjTGPOJmgGHq_5G1-E-AYer_kbX4T5ADIsyqkxPSyVnbwAVbpIPsrgfLP4UFp8qmVtmKWlwC&_nc_ohc=G_SJa9qzF2QAX-b-Xlw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQvLgSCl3CTYuPDDI-5yG5ua-BkfB11qiyJYeDxv2cZHA&oe=65349454);
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+*{
+   margin: 0;
+   padding: 0;
+   color: #f2f5f7;
+   font-family: sans-serif;
+   letter-spacing: 1px;
+   font-weight: 300;
+}
+body{
+   overflow-x: hidden;
+}
+nav{
+   height: 4.5rem;
+   width: 100vw;
+   background-color: #131418;
+   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+   display: flex;
+   position: fixed;
+   z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+   padding:1vh 1vw;
+   text-align: center;
+}
+.logo img {
+   height: 5rem;
+   width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+   display: flex;
+   list-style: none; 
+   width: 88vw;
+   padding: 0 0.7vw;
+   justify-content: space-evenly;
+   align-items: center;
+   text-transform: uppercase;
+}
+.nav-links li a{
+   text-decoration: none;
+   margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+   color: #b7950e;
+}
+.nav-links li {
+   position: relative;
+}
+.nav-links li a:hover::before{
+   width: 80%;
+}
+.p4 {
+   padding-top: 200px;
+   text-align: center;
+   font-size: 50px;
+}
+.getintouch {
+    padding-top: 10%;
+    text-align: center;
+}
+.getintouch h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #8c5123;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+}
+/*social buttons*/
+.button {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}
+.socialbttn {
+    text-align: center;
+    padding-top: 5%;    
+}
+.socialbttn button {
+    margin-top: 2%;
+}
+.socialbttn h1 {
+    padding-top: 2%;
+}
+  </style>
+
+  <body>
+       <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+         <span style="color:#7f6711; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">CUISINES</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="chefs.html">Chefs</a></li>
+            <li><a href="equipments.html">Equipments</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+       <div class="getintouch">
+        <h1>Get in Touch</h1>
+    </div>      
+  <div class="socialbttn">      
+      <h1>Address</h1>
+      <a href="https://maps.app.goo.gl/MWnKF4crJDDfj7u19">
+      <button class="button type1">
+  <span class="btn-txt">Find us here!</span>
+</button></a>
+        <h1>Socials</h1>
+  <a href="https://www.facebook.com/profile.php?id=61551463931866&mibextid=ZbWKwL">
+  <button class="button type1">
+  <span class="btn-txt">Facebook</span>
+</button><a/>
+<a href="https://instagram.com/foodasanedibleart?igshid=MzRlODBiNWFlZA==">
+<button class="button type1">
+  <span class="btn-txt">Instagram</span>
+</button></a>
+<a href="mailto:foodasanedibleart@gmail.com">
+<button class="button type1">
+  <span class="btn-txt">Email</span>
+</button></a>
+  <a href="https://twitter.com/foodasanart?t=LydpYz1N71HxROYiF82mrg&s=09 ">
+<button class="button type1">
+  <span class="btn-txt">Tweet Us!</span>
+</button></a>
+  </div>
+
+  </body>
+  </html>

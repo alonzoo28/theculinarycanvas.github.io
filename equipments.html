@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<head>
+ <html>
+  <meta charset="UTF-8">
+  <meta name="description" content="Cooking book">
+  <meta name="keywords" content="Cook book, Cousines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Grade 12 Students">   
+  <title>The Culinary Canvas: Food as an Edible Art</title> 
+  <style>
+body{
+    background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/380745328_1410125786384763_7048855598403155790_n.jpg?stp=dst-jpg_s370x247&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFyAXS6QtV_di4GvjTGPOJmgGHq_5G1-E-AYer_kbX4T5ADIsyqkxPSyVnbwAVbpIPsrgfLP4UFp8qmVtmKWlwC&_nc_ohc=G_SJa9qzF2QAX-b-Xlw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQvLgSCl3CTYuPDDI-5yG5ua-BkfB11qiyJYeDxv2cZHA&oe=65349454);
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+*{
+   margin: 0;
+   padding: 0;
+   color: #f2f5f7;
+   font-family: sans-serif;
+   letter-spacing: 1px;
+   font-weight: 300;
+}
+body{
+   overflow-x: hidden;
+}
+nav{
+   height: 4.5rem;
+   width: 100vw;
+   background-color: #131418;
+   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+   display: flex;
+   position: fixed;
+   z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+   padding:1vh 1vw;
+   text-align: center;
+}
+.logo img {
+   height: 5rem;
+   width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+   display: flex;
+   list-style: none; 
+   width: 88vw;
+   padding: 0 0.7vw;
+   justify-content: space-evenly;
+   align-items: center;
+   text-transform: uppercase;
+}
+.nav-links li a{
+   text-decoration: none;
+   margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+   color: #b7950e;
+}
+.nav-links li {
+   position: relative;
+}
+.nav-links li a:hover::before{
+   width: 80%;
+}
+.p4 {
+   padding-top: 200px;
+   text-align: center;
+   font-size: 50px;
+}
+.headerequip {
+    padding-top: 9%;
+    text-align: center;
+}
+/*collapsible*/
+.accordion {
+margin: 60px auto;
+width: 600px;
+}
+
+.accordion li {
+list-style: none;
+width: 100%;
+margin: 20px;
+padding: 10px;
+border-radius: 8px;
+background: #e3edf7;
+box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+-6px -6px 10px 1px rgba(255, 255, 255, 0.7);
+}
+
+.accordion li label {
+ display: flex;
+ font-weight: 500;
+ align-items: center;
+ padding: 10px;
+ font-size: 18px;
+ cursor: pointer;
+ }
+
+label::before {
+content: '+';
+margin-right: 10px;
+font-size: 24px;
+font-weight: 600;
+}
+
+.accordion p, label {
+    color: black;
+}
+
+input[type="radio"] {
+display: none;
+}
+
+.accordion .content {
+color: #555;
+padding: 0 10px;
+line-height: 26px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+max-height: 400px;
+padding: 10px 10px 20px;
+}
+.accordion input[type="radio"]:checked + label::before{ content: "-";
+}
+
+  </style>
+
+  <body>
+       <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+         <span style="color:#7f6711; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">CUISINES</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="chefs.html">Chefs</a></li>
+            <li><a href="equipments.html">Equipments</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+  <div class="headerequip">
+    <h1>Different Types of Equipments</h1>
+  </div>
+  <ul class="accordion">
+  <li>
+<input type="radio" name="accordion" id="first" checked>
+<label for="first">GRIDDLE</label>
+<div class="content">
+<p>Some griddles now come with a flat and ridged surface option. There are also two-burner griddles for stovetop use and griddles which fold in half to store. Offer significant benefits in restaurants and fast-food applications as they heat up quickly and provide a consistent cooking temperature.</p>
+ </div>
+ </li>
+<li>
+<input type="radio" name="accordion" id="second">
+<label for="second">MIXER</label>
+<div class="content">
+<p> Hand mixers are the most common type of mixer used in restaurants. They are small and portable, making them great for mixing ingredients or whipping cream. Hand mixers let you whip up your baking or cooking favorites by mixing, whipping, kneading and more. Whether a savory dish or sweet treat, a hand mixer is a versatile tool that can bring your recipe to the perfect consistency. The technique you use with your hand mixer can impact baking in significant ways.</p>
+ </div>
+ </li>
+ <li>
+<input type="radio" name="accordion" id="third">
+<label for="third">PEELER</label>
+<div class="content">
+<p>A peeler is a kitchen tool, a distinct type of kitchen knife, consisting of a metal blade with a slot with a sharp edge attached to a handle, used to remove the outer layer of some vegetables such as potatoes, broccoli stalks, and carrots, and fruits such as apples and pears. 
+ </p>
+ </div>
+ </li>
+ <li>
+<input type="radio" name="accordion" id="fourth">
+<label for="fourth">WHISK</label>
+<div class="content">
+<p>A whisk is a cooking utensil which can be used to blend ingredients smooth or to incorporate air into a mixture, in a process known as whisking or whipping. Most whisks consist of a long, narrow handle with a series of wire loops joined at the end.</p>
+ </div>
+ </li>
+ <li>
+<input type="radio" name="accordion" id="five">
+<label for="five">TENDERIZER</label>
+<div class="content">
+<p> The goal of a meat tenderizer is to make meat softer and easier to chew. Tough meat is difficult to chew and digest and it's unappealing as well. Tender meat, on the other hand, is more palatable, tastier, and chef's kiss.
+</p>
+ </div>
+ </li>
+ <li>
+<input type="radio" name="accordion" id="six">
+<label for="six">CUT RESISTANT GLOVES</label>
+<div class="content">
+<p> Cut-resistant gloves are a type of personal protective equipment (PPE) specifically designed to protect hands from cuts or lacerations due to contact with various cutting machines, equipment, tools, or sharp-edged items such as knives, blades, metals, glass, or ceramics.    
+</p>
+ </div>
+ </li>
+<li>
+<input type="radio" name="accordion" id="seven">
+<label for="seven">FUNNEL</label>
+<div class="content">
+<p>A kitchen utensil that is used to pour liquids and small-grained ingredients from one source into another. Funnels have large open tops that slope down and decrease in size forming a small diameter outlet allowing placement into smaller areas. </p>
+ </div>
+ </li>
+<li>
+<input type="radio" name="accordion" id="eight">
+<label for="eight">ROLLING PIN</label>
+<div class="content">
+<p>A long cylindrical shaped kitchen utensil, generally used to roll out various types of dough when making food items such as bread, pastries and cookies. This tool also works well for crushing crackers and breadcrumbs.
+</p>
+ </div>
+ </li>
+<li>
+<input type="radio" name="accordion" id="nine">
+<label for="nine">APRON</label>
+<div class="content">
+<p> An apron is something you wear over your clothes to protect them from the mess you make while you're cooking. Some aprons tie around your waist, while others cover your entire torso. Bakers, chefs, and butchers often wear aprons to keep their clothing clean.
+</p>
+ </div>
+ </li>
+ <li>
+<input type="radio" name="accordion" id="ten">
+<label for="ten">STRAINER</label>
+<div class="content">
+<p> A strainer is a wire-mesh silicone or metal kitchen sieve that chefs and home cooks use to separate liquids from fine solids in cooking, often in situations where small solids or pieces of sediment (like tea leaves or fruit seeds) require finer filtration.</p>
+ </div>
+ </li>
+ 
+ 
+ </ul>
+   </body>
+  </html>

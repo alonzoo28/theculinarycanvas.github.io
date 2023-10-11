@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<head>
+    <html>
+    <meta charset="UTF-8">
+    <meta name="description" content="Cooking book">
+    <meta name="keywords" content="Cook book, Cousines">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grade 12 Students">
+    <title>The Culinary Canvas: Food as an Edible Art</title>
+    <style>
+        body {
+            background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/380745328_1410125786384763_7048855598403155790_n.jpg?stp=dst-jpg_s370x247&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFyAXS6QtV_di4GvjTGPOJmgGHq_5G1-E-AYer_kbX4T5ADIsyqkxPSyVnbwAVbpIPsrgfLP4UFp8qmVtmKWlwC&_nc_ohc=G_SJa9qzF2QAX-b-Xlw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQvLgSCl3CTYuPDDI-5yG5ua-BkfB11qiyJYeDxv2cZHA&oe=65349454);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: #f2f5f7;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            height: 4.5rem;
+            width: 100vw;
+            background-color: #131418;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            position: fixed;
+            z-index: 10;
+        }
+
+        /*Styling logo*/
+        .logo {
+            padding: 1vh 1vw;
+            text-align: center;
+        }
+
+        .logo img {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        /*Styling Links*/
+        .nav-links {
+            display: flex;
+            list-style: none;
+            width: 88vw;
+            padding: 0 0.7vw;
+            justify-content: space-evenly;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            margin: 0 0.7vw;
+        }
+
+        .nav-links li a:hover {
+            color: #b7950e;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links li a:hover::before {
+            width: 80%;
+        }
+
+        /*styling choose a cuisine*/
+        .choosecuisine {
+            padding-top: 9%;
+            text-align: center;
+        }
+
+        .choosecuisine h1 {
+            font-weight: 600;
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: black;
+            font-size: 50px;
+        }
+
+        .cuisine1 {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5%;
+        }
+
+        .cuisine1 img {
+            max-width: 20%;
+            max-height: 20%;
+            border-radius: 16px;
+        }
+
+
+        .cuisine2 {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5%;
+        }
+
+        .cuisine2 img {
+            max-width: 20%;
+            max-height: 20%;
+            border-radius: 16px;
+        }
+
+        .cuisine3 {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5%;
+        }
+
+        .cuisine3 img {
+            max-width: 20%;
+            max-height: 20%;
+            border-radius: 16px;
+        }
+
+        /*styling cuisine buttons*/
+        .box {
+            width: 170px;
+            height: auto;
+            float: left;
+            transition: .5s linear;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            padding: 15px;
+            text-align: center;
+            margin: 0 5px;
+            background: transparent;
+            text-transform: uppercase;
+            font-weight: 900;
+            
+        }
+
+        .box:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 100%;
+            border-bottom: 4px solid transparent;
+            border-left: 4px solid transparent;
+            box-sizing: border-box;
+            transform: translateX(100%);
+        }
+
+        .box:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-top: 4px solid transparent;
+            border-right: 4px solid transparent;
+            box-sizing: border-box;
+            transform: translateX(-100%);
+        }
+
+        .box:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .box:hover:before {
+            border-color: #262626;
+            height: 100%;
+            transform: translateX(0);
+            transition: .3s transform linear, .3s height linear .3s;
+        }
+
+        .box:hover:after {
+            border-color: #262626;
+            height: 100%;
+            transform: translateX(0);
+            transition: .3s transform linear, .3s height linear .5s;
+        }
+
+        button {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background: transparent;
+        }
+
+        .cbttns {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 1%;
+        }
+    </style>
+
+<body>
+    <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+            <span
+                style="color:#7f6711; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">CUISINES</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="chefs.html">Chefs</a></li>
+            <li><a href="equipments.html">Equipments</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+        </ul>
+    </nav>
+    <div class="choosecuisine">
+        <h1>CHOOSE A CUISINE</h1>
+    </div>
+    <div class="cuisine1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiHzxFUQsyynKGRVJjTLvWdamASd4wZ0f0Nw&usqp=CAU"
+            alt="French Cuisine">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsyz_acS0ATNlGrV2bOI83dK84eqYaaS5drA&usqp=CAU"
+            alt="Turkish Cuisine">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIHiCfSho45T4bKGUYliX_zag60z6ohaNT1g&usqp=CAU"
+            alt="Indian Cuisine">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDUE9GF5CdByh4Q9137_MTXVebqQ2Z_9RLWg&usqp=CAU"
+            alt="Italian Cuisine">
+    </div>
+    <div class="cbttns">
+        <a href="Frenchcuisine.html">
+            <button>
+                <span class="box">
+                    French Cuisine
+                </span>
+            </button></a>
+        <a href="Turkishcuisine.html">
+            <button>
+                <span class="box">
+                    Turkish Cuisine
+                </span>
+            </button></a>
+        <a href="Indiancuisine.html">
+            <button>
+                <span class="box">
+                    Indian Cuisine
+                </span>
+            </button></a>
+        <a href="Italiancuisine.html">
+            <button>
+                <span class="box">
+                    Italian Cuisine
+                </span>
+            </button></a>
+    </div>
+    <!-- CUISINE ROW2 -->
+    <div class="cuisine2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcogtgJhbAlL4Nj6NLeXcuwXoE47DuwxEZBg&usqp=CAU"
+            alt="Chinese Cuisine">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-F2dXd1eqpYBjbJ1-J_hLODfcsvhbABNBIA&usqp=CAU"
+            alt="German Cuisine">
+        <img src="https://cms-b-assets.familysearch.org/dims4/default/9539f79/2147483647/strip/true/crop/800x500+0+0/resize/800x500!/format/jpg/quality/90/?url=https%3A%2F%2Ffamilysearch-brightspot.s3.amazonaws.com%2Fa7%2Fcf%2Ffa5db9748c111aeac402ac8a3a38%2Fjapanese-bento-box-lunch.jpg"
+            alt="Japanese Cuisine">
+        <img src="https://assets.epicurious.com/photos/579f96a620ada1484ddf3038/master/pass/filipino-adobo-style-chicken.jpg"
+            alt="Filipino Cuisine">
+    </div>
+    <div class="cbttns">
+        <a href="Chinesecuisine.html">
+            <button>
+                <span class="box">
+                    Chinese Cuisine
+                </span>
+            </button></a>
+        <a href="Germancuisine.html">
+            <button>
+                <span class="box">
+                    German Cuisine
+                </span>
+            </button></a>
+        <a href="Japanesecuisine.html">
+            <button>
+                <span class="box">
+                    Japanese Cuisine
+                </span>
+            </button></a>
+        <a href="Filipinocuisine.html">
+            <button>
+                <span class="box">
+                    Filipino Cuisine
+                </span>
+            </button></a>
+    </div>
+    <!-- CUISINE ROW 3 -->
+    <div class="cuisine3">
+        <img src="https://th.bing.com/th/id/OIP.kAA8JjW-UO-UD8u8fXx9uAHaE8?pid=ImgDet&rs=1"
+            alt="Korean Cuisine">
+        <img src="https://th.bing.com/th/id/OIP.1-Nx9qL_30q_zfznb0w3iwHaE8?pid=ImgDet&rs=1"
+            alt="Thai Cuisine">
+        <img src="https://thegavoice.com/wp-content/uploads/2014/08/mexican-food-2462.jpg"
+            alt="Mexican Cuisine">
+        <img src="https://i.pinimg.com/736x/2a/30/02/2a30023a85247f390965a47c89143239--brazilian-dishes-food-to-make.jpg"
+            alt="Brazilian Cuisine">
+    </div>
+    <div class="cbttns">
+        <a href="Koreancuisine.html">
+            <button>
+                <span class="box">
+                    Korean Cuisine
+                </span>
+            </button></a>
+        <a href="Thaicuisine.html">
+            <button>
+                <span class="box">
+                    Thai Cuisine
+                </span>
+            </button></a>
+        <a href="Mexicancuisine.html">
+            <button>
+                <span class="box">
+                    Mexican Cuisine
+                </span>
+            </button></a>
+        <a href="Braziliancuisine.html">
+            <button>
+                <span class="box">
+                    Brazilian Cuisine
+                </span>
+            </button></a>
+    </div>
+</body>
+
+</html>

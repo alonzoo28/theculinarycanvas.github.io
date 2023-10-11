@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+ <html>
+  <meta charset="UTF-8">
+  <meta name="description" content="Cooking book">
+  <meta name="keywords" content="Cook book, Cousines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=<"author" content="Grade 12 Students">   
+  <title>The Culinary Canvas: Food as an Edible Art</title> 
+  <style>
+body{
+    background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/380745328_1410125786384763_7048855598403155790_n.jpg?stp=dst-jpg_s370x247&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFyAXS6QtV_di4GvjTGPOJmgGHq_5G1-E-AYer_kbX4T5ADIsyqkxPSyVnbwAVbpIPsrgfLP4UFp8qmVtmKWlwC&_nc_ohc=G_SJa9qzF2QAX-b-Xlw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQvLgSCl3CTYuPDDI-5yG5ua-BkfB11qiyJYeDxv2cZHA&oe=65349454);
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+*{
+   margin: 0;
+   padding: 0;
+   color: #f2f5f7;
+   font-family: sans-serif; 
+   letter-spacing: 1px;
+   font-weight: 300;
+}
+body{
+   overflow-x: hidden;
+}
+nav{
+   height: 4.5rem;
+   width: 100vw;
+   background-color: #131418;
+   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+   display: flex;
+   position: fixed;
+   z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+   padding:1vh 1vw;
+   text-align: center;
+}
+.logo img {
+   height: 5rem;
+   width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+   display: flex;
+   list-style: none; 
+   width: 88vw;
+   padding: 0 0.7vw;
+   justify-content: space-evenly;
+   align-items: center;
+   text-transform: uppercase;
+}
+.nav-links li a{
+   text-decoration: none;
+   margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+   color: #b7950e;
+}
+.nav-links li {
+   position: relative;
+}
+.nav-links li a:hover::before{
+   width: 80%;
+}
+
+.p4 {
+   padding-top: 200px;
+   text-align: center;
+   font-size: 50px;
+}
+.choosecuisine {
+            padding-top: 9%;
+            text-align: center;
+        }
+
+        .choosecuisine h1 {
+            font-weight: 600;
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: black;
+            font-size: 50px;
+        }
+
+        .cuisine1 {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5%;
+        }
+
+        .cuisine1 img {
+            max-width: 20%;
+            max-height: 20%;
+            border-radius: 16px;
+        }
+        
+        .box {
+            width: 170px;
+            height: auto;
+            float: left;
+            transition: .5s linear;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            padding: 15px;
+            text-align: center;
+            margin: 0 5px;
+            background: transparent;
+            text-transform: uppercase;
+            font-weight: 900;
+            
+        }
+
+        .box:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 100%;
+            border-bottom: 4px solid transparent;
+            border-left: 4px solid transparent;
+            box-sizing: border-box;
+            transform: translateX(100%);
+        }
+
+        .box:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-top: 4px solid transparent;
+            border-right: 4px solid transparent;
+            box-sizing: border-box;
+            transform: translateX(-100%);
+        }
+
+        .box:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .box:hover:before {
+            border-color: #262626;
+            height: 100%;
+            transform: translateX(0);
+            transition: .3s transform linear, .3s height linear .3s;
+        }
+
+        .box:hover:after {
+            border-color: #262626;
+            height: 100%;
+            transform: translateX(0);
+            transition: .3s transform linear, .3s height linear .5s;
+        }
+
+        button {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background: transparent;
+        }
+
+        .cbttns {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 1%;
+        }
+  </style>
+
+  <body>
+       <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+         <span style="color:#7f6711; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">CUISINES</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="chefs.html">Chefs</a></li>
+            <li><a href="equipments.html">Equipments</a></li>
+            <li><a href="contactus">Contact Us</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+    <div class="choosecuisine">
+      <h1>MEXICAN DISHES</h1>
+  </div>
+  <div class="cuisine1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBfPwpk6Eynp9RgzkvQooCn0DdVf4Dtg2ZrA&usqp=CAU"
+          alt="Chili-Stuffed Poblano Peppers">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2BXTI6f08ep6t3ny3-dEcnbcrKmFcPcX9_Q&usqp=CAU "
+          alt="Slow-Cooker Barbacoa">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY--lUu661uj0TCfKeYGEfEZQCO4ojU8vSrQ&usqp=CAU "
+          alt="Grilled Onion & Skirt Steak Tacos">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFgw9Jj81ehrxtw7l6Sjg73WTMlJBhQpWfhg&usqp=CAU"
+          alt="Carnitas Huevos Rancheros">
+  </div>
+  <div class="cbttns">
+      <a href="poblano.html">
+          <button>
+              <span class="box">
+                  Chili-Stuffed Poblano Peppers
+              </span>
+          </button></a>
+      <a href="barbacoa.html">
+          <button>
+              <span class="box">
+                  Slow-Cooker Barbacoa
+              </span>
+          </button></a>
+      <a href="tacos.html">
+          <button>
+              <span class="box">
+                 Grilled Onion & Skirt Steak Tacos
+              </span>
+          </button></a>
+      <a href="rancheros.html">
+          <button>
+              <span class="box">
+                  Carnitas Huevos Rancheros
+              </span>
+          </button></a>
+  </div>
+    </div>
+    <!-- dishes row 2 -->
+    <div class="cuisine1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdbtG9Zbg0DSD5Y20tcOLHA-QarNM1JLzneQ&usqp=CAU"
+          alt="Instant Pot Black Beans">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSsm7axh-Ah_6EOdYZKZ781OSvuV7Rka45fw&usqp=CAU"
+          alt="Albondigas">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKZxuNQJeeoBzIb3e9pQCbEe8svSO9wMogQ&usqp=CAU"
+          alt="Chicken Tamales">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8anaflPnJxStWINUgV7staI_HckQEC6yL1Q&usqp=CAU "
+          alt="Pork Posole">
+  </div>
+  <div class="cbttns">
+      <a href="black.html">
+          <button>
+              <span class="box">
+                  Instant Pot Black Beans
+              </span>
+          </button></a>
+      <a href="albondigas.html">
+          <button>
+              <span class="box">
+                  Albondigas
+              </span>
+          </button></a>
+      <a href="tamales.html">
+          <button>
+              <span class="box">
+              Chicken Tamales
+              </span>
+          </button></a>
+      <a href="posole.html">
+          <button>
+              <span class="box">
+                   Pork Posole
+              </span>
+          </button></a>
+  </div>
+    </div>
+   </body>
+  </html>

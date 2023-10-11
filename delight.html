@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<head>
+ <html>
+  <meta charset="UTF-8">
+  <meta name="description" content="Cooking book">
+  <meta name="keywords" content="Cook book, Cousines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=<"author" content="Grade 12 Students">   
+  <title>The Culinary Canvas: Food as an Edible Art</title> 
+  <style>
+body{
+    background-image: url(https://scontent.xx.fbcdn.net/v/t1.15752-9/380745328_1410125786384763_7048855598403155790_n.jpg?stp=dst-jpg_s370x247&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFyAXS6QtV_di4GvjTGPOJmgGHq_5G1-E-AYer_kbX4T5ADIsyqkxPSyVnbwAVbpIPsrgfLP4UFp8qmVtmKWlwC&_nc_ohc=G_SJa9qzF2QAX-b-Xlw&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQvLgSCl3CTYuPDDI-5yG5ua-BkfB11qiyJYeDxv2cZHA&oe=65349454);
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+*{
+   margin: 0;
+   padding: 0;
+   color: #f2f5f7;
+   font-family: sans-serif;
+   letter-spacing: 1px;
+   font-weight: 300;
+   scroll-behavior: smooth;
+}
+body{
+   overflow-x: hidden;
+}
+nav{
+   height: 4.5rem;
+   width: 100vw;
+   background-color: #131418;
+   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+   display: flex;
+   position: fixed;
+   z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+   padding:1vh 1vw;
+   text-align: center;
+}
+.logo img {
+   height: 5rem;
+   width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links{
+   display: flex;
+   list-style: none; 
+   width: 88vw;
+   padding: 0 0.7vw;
+   justify-content: space-evenly;
+   align-items: center;
+   text-transform: uppercase;
+}
+.nav-links li a{
+   text-decoration: none;
+   margin: 0 0.7vw;
+}
+.nav-links li a:hover {
+   color: #b7950e;
+}
+.nav-links li {
+   position: relative;
+}
+.nav-links li a:hover::before{
+   width: 80%;
+}
+.moraimg {
+   padding-top: 8%;
+}
+.moraimg img {
+    border-radius: 6px;
+    height: 350px;
+}
+/*buttons in mora*/
+button {
+  height: 50px;
+  margin: 5px;
+  width: 120px;
+  background: #7f6711;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #404C5D 1px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #bf841e, #d18006);
+  -webkit-box-shadow: -1px -5px 15px #c49a41, 
+               5px  5px 15px #000000, 
+    inset      5px  5px 10px #be770b, 
+    inset     -5px -5px 10px #d48d13;
+ 
+}
+
+button:hover {
+  -webkit-box-shadow: 1px 1px 13px #20232e,
+                    -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e,
+             -1px -1px 13px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+button:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e,
+                     -1px -1px 33px #545b78;
+  box-shadow: 1px 1px 13px #20232e,
+             -1px -1px 33px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+.recipemora h1{
+   padding-left: 5%;
+   font-size: 60px;
+   padding-top: 8%;
+   font-family: Bebas Neue;
+   -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+}
+.recipemora ul {
+   padding-left: 10%;
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.preparation1 h1{
+   padding-left: 5%;
+   font-size: 60px;
+   padding-top: 2%;
+   font-family: Bebas Neue;
+   -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+}
+.preparation1 ul {
+   padding-left: 10%;
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.procedure1 h1{
+   padding-left: 5%;
+   font-size: 60px;
+   padding-top: 2%;
+   font-family: Bebas Neue;
+   -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+}
+.procedure1 ul {
+   padding-left: 10%;
+   font-size: 30px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+</style>
+
+  <body>
+   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+   <script>
+   // Get the button
+   let mybutton = document.getElementById("myBtn");
+   
+   // When the user scrolls down 20px from the top of the document, show the button
+   window.onscroll = function() {scrollFunction()};
+   
+   function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       mybutton.style.display = "block";
+     } else {
+       mybutton.style.display = "none";
+     }
+   }
+   
+   // When the user clicks on the button, scroll to the top of the document
+   function topFunction() {
+     document.body.scrollTop = 0;
+     document.documentElement.scrollTop = 0;
+   }
+   </script>
+   <nav>
+        <div class="logo" style="display: flex;align-items: center;">
+         <span style="color:#7f6711; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">CUISINES</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="chefs.html">Chefs</a></li>
+            <li><a href="equipments.html">Equipments</a></li>
+            <li><a href="contactus">Contact Us</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+    <div class="moraimg">
+       <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Jy1wPKF74gFfHsk3Zre9skPDkWYsBBtnxQ&usqp=CAU "></center>
+        <div class="bttnrecipe">
+        <center>
+         <a href="Turkishcuisine.html"><button>
+         Back
+         </button></a>
+        <a href="#Recipe">
+         <button>
+         Recipe
+        </button></a>
+        <a href="#procedure">
+        <button>
+         Procedure
+        </button></a></center>
+      </div>
+         </div>
+       <div class="recipemora">
+         <section id="Recipe">
+         <h1>RECIPE</h1>
+         <br> 
+<ul>• 2 cups granulated sugar</ul>
+<ul>• 2 cups water</ul>
+<ul>• 1/2 cup cornstarch</ul>
+<ul>• 1/4 teaspoon cream of tartar</ul>
+<ul>• 2-3 tablespoons lemon juice (or rosewater for flavor)</ul>
+<ul>• Food coloring (optional)</ul>
+<ul>• Powdered sugar, for dusting</ul>
+<ul>• Chopped pistachios or walnuts (optional)</ul>
+      <br><br> 
+      </section>
+     </div>
+     <div class="procedure1">
+     <section id="procedure">
+      <h1>PROCEDURE</h1>
+      <br>
+<ul>Preparing the Sugar Syrup</ul>
+<ul>• In a saucepan, combine the granulated sugar and water over medium heat. Stir until the sugar dissolves.</ul>
+<ul>• Add the cream of tartar and lemon juice (or rosewater) to the syrup. These ingredients help prevent crystallization and provide flavor.</ul>
+<ul>• Bring the syrup to a boil, then reduce the heat and let it simmer for about 15-20 minutes, or until it reaches the "soft ball" stage. To test this, drop a small amount of the syrup into a bowl of cold water; it should form a soft, pliable ball when squeezed with your fingers.</ul>
+<br>
+<ul>Mixing the Cornstarch Mixture</ul>
+<ul>• While the syrup is simmering, in a separate bowl, mix the cornstarch with enough water to form a smooth paste.</ul>
+<ul>• Gradually add the cornstarch paste to the simmering syrup, stirring constantly to avoid lumps.</ul>
+<ul>• Continue to cook the mixture over low heat, stirring constantly, until it thickens and turns translucent. This may take around 20-30 minutes.</ul>
+<br>
+<ul>Flavoring and Coloring</ul>
+<ul>• If you want to add flavor and color, do so at this stage. For rose-flavored Turkish Delight, use rosewater. For citrus flavors, use lemon juice. Add a few drops of food coloring if desired and mix well.</ul>
+<br>
+<ul>Setting and Cutting</ul>
+<ul>• Grease a square or rectangular pan with oil and line it with parchment paper. This will make it easier to remove the Turkish Delight later.</ul>
+<ul>• Pour the hot mixture into the prepared pan and smooth the surface with a spatula.</ul>
+<ul>• Let it cool and set at room temperature for several hours or overnight.</ul>
+<ul>• Once set, use a sharp knife or scissors dipped in powdered sugar to cut the Turkish Delight into small squares or rectangles.</ul>
+<br>
+<ul>Finishing Touches</ul>
+<ul>• Toss the Turkish Delight pieces in powdered sugar to prevent sticking and give them a nice finish.</ul>
+<ul>• Optionally, you can roll the pieces in chopped pistachios or walnuts for added texture and flavor.</ul>
+      </section>
+   </div>
+    <br><br>
+</body>
+  </html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<head>
+ <html>
+  <meta charset="UTF-8">
+  <meta name="description" content="Cooking book">
+  <meta name="keywords" content="Cook book, Cousines">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Grade 12 Students">   
+  <title>The Culinary Canvas: Food as an Edible Art</title>  
+  <style>
+  body {
+  background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/380666323_769082885231167_5526156045703304637_n.jpg?stp=dst-jpg_s370x247&_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeEt8LLsQGxuvFsLRxYlxhLCU1_KaK7JkHVTX8porsmQddwLBwNrzy_tMOSvvTi1spmTdxu2dFzz69HeIXLbQOqd&_nc_ohc=LLad8xHECHEAX9jC_7K&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSkYZhqK1l7Yv9kplzbq6wep8FYWbzzoqhvBx0WrhXWaA&oe=65333DAE");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ h1 {
+  text-align:  center;
+  text-height: 1px;
+  line-spacing: 50px;
+  padding-top: 150px;
+  font-size: 100px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: grey;
+
+ }
+h2 {
+  text-align:  center;
+  text-height: 1px;
+  line-spacing: 5%;
+}
+.b1 {
+ padding: 17px 40px;
+ border-radius: 50px;
+ border: 0;
+ background-color: #845724;
+ box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+ letter-spacing: 1.5px;
+ text-transform: uppercase;
+ font-size: 15px;
+ transition: all .5s ease;
+}
+
+.b1:hover {
+ letter-spacing: 3px;
+ background-color: hsl(47, 69%, 41%);
+ color: hsl(0, 0%, 100%);
+ box-shadow: rgb(160, 140, 61) 0px 7px 29px 0px;
+}
+
+.b1:active {
+ letter-spacing: 3px;
+ background-color: hsl(47, 51%, 48%);
+ color: hsl(0, 0%, 100%);
+ box-shadow: rgb(146, 130, 67) 0px 0px 0px 0px;
+ transform: translateY(10px);
+ transition: 100ms;
+ text-shadow:
+}
+/*loader*/
+.loadingspinner {
+  --square: 26px;
+  --offset: 30px;
+  --duration: 2.4s;
+  --delay: 0.2s;
+  --timing-function: ease-in-out;
+  --in-duration: 0.4s;
+  --in-delay: 0.1s;
+  --in-timing-function: ease-out;
+  width: calc( 3 * var(--offset) + var(--square));
+  height: calc( 2 * var(--offset) + var(--square));
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.loadingspinner div {
+  display: inline-block;
+  background: darkorange;
+    /*background: var(--text-color);*/
+    /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
+  border: none;
+  border-radius: 2px;
+  width: var(--square);
+  height: var(--square);
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  font-size: 6pt;
+  color: black;
+}
+
+.loadingspinner #square1 {
+  left: calc( 0 * var(--offset) );
+  top: calc( 0 * var(--offset) );
+  animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
+               squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square2 {
+  left: calc( 0 * var(--offset) );
+  top: calc( 1 * var(--offset) );
+  animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
+              squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square3 {
+  left: calc( 1 * var(--offset) );
+  top: calc( 1 * var(--offset) );
+  animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
+               squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square4 {
+  left: calc( 2 * var(--offset) );
+  top: calc( 1 * var(--offset) );
+  animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
+               squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square5 {
+  left: calc( 3 * var(--offset) );
+  top: calc( 1 * var(--offset) );
+  animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
+               squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+@keyframes square1 {
+  0% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  8.333% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  100% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+}
+
+@keyframes square2 {
+  0% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  8.333% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  16.67% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  25.00% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  83.33% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  91.67% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  100% {
+    left: calc( 0 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+}
+
+@keyframes square3 {
+  0%,100% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  16.67% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  25.00% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  33.33% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  41.67% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  66.67% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  75.00% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  83.33% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  91.67% {
+    left: calc( 1 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+}
+
+@keyframes square4 {
+  0% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  33.33% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  41.67% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  50.00% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 2 * var(--offset) );
+  }
+
+  58.33% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  100% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+}
+
+@keyframes square5 {
+  0% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  50.00% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  58.33% {
+    left: calc( 3 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  66.67% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 0 * var(--offset) );
+  }
+
+  75.00% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+
+  100% {
+    left: calc( 2 * var(--offset) );
+    top: calc( 1 * var(--offset) );
+  }
+}
+
+@keyframes squarefadein {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.0;
+  }
+
+  100% {
+    transform: scale(1.0);
+    opacity: 1.0;
+  }
+}
+ </style>
+</head>
+  <body>
+    <h1>The Culinary Canvas<br>Food as an Edible Art</h1>
+     <a href="home.html">
+    <center><button class="b1">Start Cooking</button></center></a>
+  </body>
+  </html>
